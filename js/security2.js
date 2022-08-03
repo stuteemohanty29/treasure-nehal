@@ -12,14 +12,18 @@ class Security2 {
     }
 
    display(){
-    system1 = new System()
-        this.button4.mousePressed(() => {
-            if(system1.authenticate(accessCode4,this.access4.value())){
-                this.button4.hide();
-                this.access4.hide();
-                score++;
-            }
-        });
+    system1 = new System();
+    this.button4.mousePressed(() => {
+        if(system1.authenticate(accessCode4,this.access4.value())){
+            this.button4.hide();
+            this.access4.hide();
+            score++;
+            textSize(20);
+            fill("white");
+            text("Score: " + score, 450, 50);
 
-    }
+        }
+    });
+
+}
 }

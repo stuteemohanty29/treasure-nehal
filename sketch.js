@@ -1,4 +1,4 @@
-var bg,bg2,form,system,code,security,security2;
+var bg,bg2,form,system,system1,code,security,security2;
 var score=0;
 
 function preload() {
@@ -8,7 +8,8 @@ function preload() {
 
 function setup() {
   createCanvas(1000,500);
-  system = new System()
+  system = new System();
+  
   security = new Security()
  // if(score>=3){
   
@@ -30,14 +31,22 @@ function draw() {
   }
 
 if(score === 3) {
-    clear();
-    background(bg2)
-    clues2();
-    security2 = new Security2();
-    security2.display();
+     clear()
+    background(bg2);
     fill("white");
     textSize(20);
     text("Score: " + score, 450, 50);
+    clues2();
+    security2 = new Security2();
+    security2.display();
+    
+  }
+  if(score === 4) {
+    clear()
+    background(bg2)
+    fill("black")
+    textSize(40);
+    text("TREASURE UNLOCKED",250, 200);
   }
   
   drawSprites()

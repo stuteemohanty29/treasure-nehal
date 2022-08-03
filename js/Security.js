@@ -25,19 +25,20 @@ class Security {
         this.button3 = createButton('Check');
         this.button3.position(100,320);
         this.button3.style('background', 'lightgrey'); 
-        
-        
-
-       
     }
 
     display(){
-system = new System()
+
         this.button1.mousePressed(() => {
             if(system.authenticate(accessCode1,this.access1.value())){
                 this.button1.hide();
                 this.access1.hide();
                 score++;
+                textSize(20);
+                fill("white");
+                text("Score: " + score, 450, 50);
+
+
             }
         });
 
@@ -46,6 +47,10 @@ system = new System()
                 this.button2.hide();
                 this.access2.hide();
                 score++;
+                textSize(20);
+                fill("white");
+                text("Score: " + score, 450, 50);
+
             }
         });
 
@@ -54,9 +59,12 @@ system = new System()
                 this.button3.hide();
                 this.access3.hide();
                 score++;
+                textSize(20);
+                fill("white");
+                text("Score: " + score, 450, 50);
+
             }
         });
 
     }
- 
 }
